@@ -21,7 +21,8 @@ public class Vacinacao_finalizada implements Estados_vacina {
 
 	@Override
 	public void finalizarVacinacao(Pessoa pessoa) {
-		pessoa.setEstado(this);
-	}
+		if(pessoa.getEstado() instanceof Habilitada_segunda_dose){
+			pessoa.setEstado(this);
+	}}
 
 }

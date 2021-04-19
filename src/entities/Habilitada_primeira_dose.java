@@ -7,7 +7,7 @@ public class Habilitada_primeira_dose implements Estados_vacina  {
 
 	@Override
 	public void hablitarPrimeiraDose(Pessoa pessoa) {
-		if(pessoa.getComorbidades() == "sim" || pessoa.getProfissap() == "sim" || pessoa.getIdade() == "sim") {
+		if((pessoa.getComorbidades().equals("sim")  || pessoa.getProfissap().equals("sim") || pessoa.getIdade().equals("sim") ) & pessoa.getEstado() instanceof Nao_habilitada ) {
 			System.out.println("Pessoa habilitada");
 			pessoa.setEstado(this);}
 		

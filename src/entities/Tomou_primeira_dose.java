@@ -24,8 +24,9 @@ public class Tomou_primeira_dose implements Estados_vacina {
 
 	@Override
 	public void tomouPrimeiraDose(Pessoa pessoa) {
-		pessoa.setEstado(this);
-
+		if(pessoa.getEstado() instanceof Habilitada_primeira_dose) {
+			pessoa.setEstado(this);
+		}
 	}
 
 }
